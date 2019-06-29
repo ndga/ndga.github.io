@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta property="og:type" content="website">
+<meta property="og:title">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title></title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title"></span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Navigationsleiste an/ausschalten">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home menu-item-active">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/26/每周刷题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/26/每周刷题/" class="post-title-link" itemprop="url">每周刷题</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-06-26 16:00:53 / Geändert am: 16:24:07" itemprop="dateCreated datePublished" datetime="2019-06-26T16:00:53+08:00">2019-06-26</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>20190320-每周刷题</p>
+<ol>
+<li><p>Python和Java、PHP、C、C#、C++等其他语言的对比？</p>
+</li>
+<li><p>简述解释型和编译型编程语言？</p>
+</li>
+<li><p>代码中要修改不可变数据会出现什么问题 抛出什么异常</p>
+</li>
+<li><p>print 调用 Python 中底层的什么方法</p>
+</li>
+<li><p>简述你对 input()函数的理解</p>
+</li>
+<li><p>Python解释器种类以及特点？</p>
+</li>
+<li><p>Python2 中 range 和 xrange 的区别</p>
+</li>
+<li><p>位和字节的关系？</p>
+</li>
+<li><p>b、B、KB、MB、GB 的关系？</p>
+</li>
+<li><p>请至少列举5个 PEP8 规范（越多越好）。</p>
+</li>
+<li><p>python递归的最大层数？递归函数停止的条件</p>
+</li>
+<li><p>ascii、unicode、utf-8、gbk 区别？</p>
+</li>
+<li><p>字节码和机器码的区别？</p>
+</li>
+<li><p>三元运算规则以及应用场景？</p>
+</li>
+<li><p>列举 Python2和Python3的区别？</p>
+</li>
+<li><p>Python和Java、PHP、C、C#、C++等其他语言的对比？<br>　　C、C++、C# 都是编译性语言，Python是一门解释型的动态类型的语言，在python中，对象是通过引用传递的，编写代码时不需要声明变量类型，直接给变量赋值即可。python是一边编译一边执行的，所以相较于C语言和Java来说运行速度会比较慢，但肉眼几乎感知不到。Python本身就是由C语言开发出来的，而且是开源的。</p>
+</li>
+</ol>
+<p>　　Java：具有卓越的通用性、高效性、平台移植性和安全性，容易学，学精难，工具丰富 ，大多数人在用。缺点：运行速度相对于C/C++有些缓慢了，这是机制原因导致的。适用于网页、企业级开发、普通应用软件、游戏后台。</p>
+<p>　　PHP：跨平台，性能优越；语法简单，入门快；目前主流技术都支持；有比较完整的支持；有很多成熟的框架；PHP 5已经有成熟的面向对象体系，能够适应基本的面向对象要求；有成熟的社区来支持PHP的开发；目前已经很多大型应用都是使用PHP；有很多开源的框架或开源的系统可以使用；配置及部署相对简单一些。缺点：多线程支持不太好，大多数时候我们只能简单的模拟去实现的；对语法不太严谨；PHP的解释运行机制繁琐。适用于网络前端，用于生成网页。也可以整个web服务器都用php，比如很多论坛引擎。</p>
+<p>　　C：简洁紧凑、灵活方便；运算符丰富；数据类型丰富；表达方式灵活实用；允许直接访问物理地址，对硬件进行操作；生成目标代码质量高，程序执行效率高；可移植性好；表达力强；缺点：C语言的缺点主要表现在数据的封装性上，这一点使得C在数据的安全性上有很大缺陷，这也是C和C++的一大区别。还有运算符和运算优先级过多，不便于记忆，语法定义不严格，编程自由度大，对新手不太友好。适用于系统底层, 驱动, 嵌入式开发。</p>
+<p>　　C#：用C# 开发应用软件可以大大缩短开发周期，同时可以利用原来除用户界面代码之外的C++代码，相比java，有更先进的语法体系、强大的周边。缺点：没有考虑代码量。</p>
+<p>　　C++：可扩展性、高效简洁快速、可移植性、面向对象的特性、强大而灵活的表达能力和不输于C的效率、支持硬件开发、程序模块间的关系更为简单，程序模块的独立性、数据的安全性就有了良好的保障、通过继承与多态性，可以大大提高程序的可重用性，使得软件的开发和维护都更为方便，适用于游戏开发, 大规模, 高性能, 分布式要求的程序开发。</p>
+<p>Python的特点：</p>
+<p>√优雅、明确、简单<br>√解释型语言<br>√开发效率非常高<br>√高级语言<br>√可移植性<br>√可扩展性<br>√可嵌入性</p>
+<p>Python的不足之处：</p>
+<p>√运行速度慢<br>√代码不能加密<br>√多线程不能利用多CPU问题</p>
+<ol start="2">
+<li>简述解释型和编译型编程语言？<br>　　计算机是不能理解高级语言的，更不能直接执行高级语言，它只能理解机器语言，所以任何使用高级语言编写的程序若想被计算机运行，都必须将其转换成计算机语言。从而产生了两种转换方式：解释和编译，所以高级语言也分为了解释型语言和编译型语言。<br>　（1）解释型语言的源代码不是直接翻译成机器语言，而是先翻译成中间代码，在程序运行的时候再由解释器把中间代码翻译成机器语言，解释型语言每执行一次就要翻译一次，效率比较低。比如Python、JavaScript、Perl、Shell等。</li>
+</ol>
+<p>　（2）编译型语言在程序运行之前需要一个专门的编译过程，把源代码编译成机器语言的文件，等程序运行时，不需要重新翻译，不管运行多少次，都可以直接使用编译的结果，程序执行效率高，但依赖编译器，跨平台性差些。比如C、C++、Delphi等。</p>
+<ol start="3">
+<li>代码中要修改不可变数据会出现什么问题抛出什么异常<br>报错，抛出TypeError异常。不可变数据类型包括 int、float、string(字符串)、tuple(元组)。可变数据类型包括 list(列表)、dict(字典)、set(集合)。</li>
+</ol>
+<ol start="4">
+<li>print 调用 Python 中底层的什么方法<br>　　在 python2 中，print 是一个命令；在 python3 中，print 是一个函数，print() 调用 sys.stdout.write() 实现，往控制台打印字符串。但是print() 跟 sys.stdout.write() 还是有点区别，print() 能自动换行，sys.stdout.write() 不能自动换行。print()能接收多个参数输出，sys.stdout.write() 只能接收一个参数。另外，sys.stdout.write() 只接收字符串格式的参数。</li>
+</ol>
+<h1 id="python2中，两种方式"><a href="#python2中，两种方式" class="headerlink" title="python2中，两种方式"></a>python2中，两种方式</h1><p>print ‘hello world’</p>
+<h1 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h1><p>print(‘hello world’)</p>
+<h1 id="hello-world-1"><a href="#hello-world-1" class="headerlink" title="hello world"></a>hello world</h1><h1 id="python3中，一种方式"><a href="#python3中，一种方式" class="headerlink" title="python3中，一种方式"></a>python3中，一种方式</h1><p>print(‘hello world’)</p>
+<h1 id="hello-world-2"><a href="#hello-world-2" class="headerlink" title="hello world"></a>hello world</h1><ol start="5">
+<li><p>简述你对 input()函数的理解<br>　　在 python3 中，是内建函数，不需要导入。input(xxx)，输入的内容 xxx 会显示出来，而且input()接收的所有数据都是字符串类型。<br>　　在 python2 中，分为input() 和 raw_input()，input() 接收 int（整型）类型的数据；raw_input() 接收 str（字符串）类型的数据。</p>
+</li>
+<li><p>Python解释器种类以及特点？<br> Cpython：默认是Cpython解释器，c语言实现</p>
+<p> IPython：基于CPython之上的一个交互式解释器</p>
+<p> Jpython：java实现，Python代码会先转化成Java字节码</p>
+<p> PyPy：python实现的python解释器，pypy运行效率高</p>
+<p> IronPython：c#实现</p>
+</li>
+<li><p>Python2 中 range 和 xrange 的区别<br>　　两者用法大致相同，不同的是 range 返回的结果是一个列表，而 xrange 返回的结果是一个生成器，range 是直接开辟一块内存空间来存放列表，xrange 则不会直接生成一个列表，而是每次调用返回其中的一个值，只有在使用的时候才会开辟内存空间，是边循环边使用，所以当列表很长时，xrange 性能比 range 好。</p>
+</li>
+</ol>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>print(type(range(10)))<br>&lt;type ‘list’&gt;<br>print(type(xrange(10)))<br>&lt;type ‘xrange’&gt;<br>print(range(10))<br>[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]<br>print(xrange(10))<br>xrange(10)</p>
+<ol start="8">
+<li>位和字节的关系？<br>8 位（bit）= 1 字节（Byte）</li>
+</ol>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>位 (b) =&gt; 二进制位（0 或 1），是最小数据单位。</p>
+<p>字节 (B) =&gt; 存储空间的基本计量单位，基本上1byte 存1个英文字母，2个byte存一个汉字。</p>
+<ol start="9">
+<li><p>b、B、KB、MB、GB 的关系？<br>1 GB = 1024 MB<br>1 MB = 1024 KB<br>1 KB = 1024 B<br>1 B = 8 bit</p>
+</li>
+<li><p>请至少列举5个 PEP8 规范（越多越好）<br>缩进：使用4个空格的缩进，不要使用制表符（Tab键），禁止空格与Tab键混用。</p>
+</li>
+</ol>
+<p>换行：折行以确保其不会超过79个字符。这有助于小显示器用户阅读，也可以让大显示器能并排显示几个代码文件。</p>
+<p>空行：使用空行分隔函数和类，以及函数内的大块代码。顶级函数间空2行，类的方法之间空1行，同一函数内的逻辑块之间空1行，文件结尾空一行。</p>
+<p>注释：如果可能，注释独占一行。避免逐行添加注释，避免没有一个注释。</p>
+<p>空格：运算符周围和逗号后面使用空格，但是括号里侧不加空格，如：a = f(1, 2) + g(3, 4)。</p>
+<p>导入格式：每个导入独占一行，导入放在文件顶部，位于模块注释和文档字符串之后，模块全局变量和常量之前。导入应该按照从最通用到最不通用的顺序分组（标准库 -&gt; 第三方库 -&gt; 自定义库），每种分组中, 应该根据每个模块的完整包路径按字典序排序，忽略大小写。不要使用 from xxx import * 这种语法。</p>
+<p>变量命名：尽可能的使用有意义的变量名，词能达意。下划线命名法和驼峰命名法。包名、模块名、函数名、方法、普通变量名全部使用小写，单词间用下划线连接。类名、异常名使用 首字母大写（CapWords ） 的方式, 异常名结尾加 Error 或 Wraning 后缀。自定义的变量名、函数名不能和标准库中的函数名重名。</p>
+<p>私有变量：小写和一个前导下划线（如：_value）。</p>
+<p>内置变量：小写，两个前导下划线和两个后置下划线（如：<strong>init</strong>）。</p>
+<ol start="11">
+<li>python递归的最大层数？递归函数停止的条件<br>　　可以通过 sys.setrecursionlimit() 进行设置，但是一般默认不会超过3925-3929这个范围。递归函数停止的条件一般定义在递归函数内部，在递归调用前要做一个条件判断，根据判断的结果选择是继续调用自身，还是 return 返回，停止递归。递归函数停止的条件：</li>
+</ol>
+<p>判断递归的次数是否达到某一限定值<br>判断运算的结果是否达到某个范围等，根据设计的目的来选择</p>
+<ol start="12">
+<li>ASCII、Unicode、UTF-8、GBK的区别？<br>ASCII：在计算机内部，所有信息最终都表示为一个二进制的字符串。每一个二进制位（bit）有0和1两种状态，因此8个二进制位可以组合出256种状态，这被称为字节（byte)。ASCII码一共规定了128个字符的编码，比如空格“SPACE”是32（二进制00100000），大写的字母A是65（二进制01000001）。这128个符号（包括32个不能打印出来的控制符号），只占用了一个字节的后面7位，最前面的1位统一规定为0。它的范围基本只有英文字母、数字和一些特殊符号 。</li>
+</ol>
+<p>Unicode：又称万国码，将世界上所有的符号都纳入其中，每一种符号都给予独一无二的编码，防止乱码。</p>
+<p>UTF-8：变长码，UTF-8是在互联网中使用最多的对Unicode的实现方式。UTF-8最大的一个特点，就是它是一种变长的编码方式。它可以使用1~4个字节表示一个符号，根据不同的符号而变化字节长度。</p>
+<p>GBK：GBK编码是对GB2312的扩展，完全兼容GB2312，GB2312是对ASCII码的中文扩展。GBK全称《汉字内码扩展规范》，使用双字节码，是用来编码汉字的。</p>
+<ol start="13">
+<li><p>字节码和机器码的区别？</p>
+<pre><code>字节码：一种中间状态（中间码）的二进制代码（文件）。需要直译器转译后才能成为机器码。
+
+机器码：是计算机可以直接执行，并且执行速度最快的代码。</code></pre></li>
+<li><p>三元运算规则以及应用场景？<br>　　三元运算符就是在赋值变量的时候，可以直接加判断，然后赋值。三元运算符的功能与 if…else 流程语句一致，它在一行中书写，代码非常精炼，执行效率更高。</p>
+</li>
+</ol>
+<p>　　格式：[on_true] if [expression] else [on_false]（res = 值1 if 条件 else 值2）</p>
+<ol start="15">
+<li>列举 Python2和Python3的区别？<br>print 语句：在 python2 中 print 是一个命令语句，不论想输出什么，直接放到 print 关键字后面即可，如：print “内容”；在 python3 中，print() 是一个函数，像其他函数一样，print() 需要你将要输出的东西作为参数传给它，如：print(“内容”)。</li>
+</ol>
+<p>Unicode 字符串：在 python2 中有两种字符串类型，Unicode 字符串和非 Unicode 字符串；在 python3 中只有一种类型，Unicode 字符串。因为 python2 中使用 ASCII 码作为默认编码方式导致字符串有两种类型；python3 中默认 Unicode 编码。</p>
+<p>input 语句：在 python2 中，分为 input() 和 raw_input()，input() 接收 int（整型）类型的数据，raw_input() 接收 str（字符串）类型的数据；在 python3 中，input() 是内建函数，不需要导入，input()接收的所有数据都是字符串类型。</p>
+<p>整数：在 python2 中区分整型、长整型；在 python3 中统称为整型，可存超长数据。python2 中的 int（整型），在32位机器上，整数的位数为32位，取值范围为-2<strong>31~2</strong>31-1，即-2147483648<del>2147483647。在64位系统上，整数的位数为64位，取值范围为-2**63</del>2**63-1，即-9223372036854775808~9223372036854775807。python2 中的long（长整型），跟C语言不同，python的长整数没有指定位宽，即：python没有限制长整数数值的大小，但实际上由于机器内存有限，我们使用的长整数数值不可能无限大。自从python2.2起，如果整数发生溢出，python会自动将整数数据转换为长整数，所以如今在长整数数据后面不加字母L也不会导致严重后果了。</p>
+<p>在 python2 中，键入的任何不带小数的数字，将被视为整数的编程类型。比如5/2=2，解决方法：5.0/2.0=2.5；在 python3 中，整数除法变得更直观 5/2=2.5。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/26/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content>
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content>
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/26/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+
+          
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2019-06-26 15:35:45" itemprop="dateCreated datePublished" datetime="2019-06-26T15:35:45+08:00">2019-06-26</time>
+            </span>
+          
+
+          
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-name">Artikel</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder"></span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.2</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.2"></script>
+
+
+
+  
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
