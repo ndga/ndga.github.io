@@ -157,7 +157,7 @@ body {
   font-size: 14px;
   line-height: 2;
   color: #555;
-  background: #eee;
+  background: #f8f8ff;
 }
 @media (max-width: 991px) {
   body {
@@ -1756,7 +1756,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #f4ff93;
+  background: #ff6e73;
 }
 .feed-link,
 .chat {
@@ -2432,7 +2432,7 @@ ul.breadcrumb li+li:last-child {
   float: left;
   margin-left: -100%;
   width: 240px;
-  background: #eee;
+  background: #f8f8ff;
   box-shadow: none;
 }
 @media (max-width: 991px) {
@@ -2839,21 +2839,21 @@ ul.breadcrumb li+li:last-child {
 }
 .post-body h1 {
   font-size: 1.6em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f8f8ff;
 }
 .post-body h1 code {
   font-size: 1em;
 }
 .post-body h2 {
   font-size: 1.45em;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #f8f8ff;
 }
 .post-body h2 code {
   font-size: 1em;
 }
 .post-body h3 {
   font-size: 1.3em;
-  border-bottom: 1px dotted #eee;
+  border-bottom: 1px dotted #f8f8ff;
 }
 .post-body h3 code {
   font-size: 1em;
@@ -2938,6 +2938,7 @@ ul.breadcrumb li+li:last-child {
   padding: 8px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   opacity: 0.9;
+color
 }
 #heart {
   animation: heartAnimate 1.33s ease-in-out infinite;
