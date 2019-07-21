@@ -1756,7 +1756,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fae4d9;
+  background: #4aff2f;
 }
 .feed-link,
 .chat {
@@ -2938,7 +2938,6 @@ ul.breadcrumb li+li:last-child {
   padding: 8px;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
   opacity: 0.9;
-color
 }
 #heart {
   animation: heartAnimate 1.33s ease-in-out infinite;
