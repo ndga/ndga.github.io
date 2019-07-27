@@ -448,7 +448,7 @@ body {
 .header-inner {
   margin: 0 auto;
   padding: 100px 0 70px;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .container .header-inner {
@@ -462,7 +462,7 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .container .main-inner {
@@ -480,7 +480,7 @@ body {
 .footer-inner {
   box-sizing: border-box;
   margin: 0px auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .container .footer-inner {
@@ -1756,7 +1756,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #4795a1;
+  background: #ff9e1d;
 }
 .feed-link,
 .chat {
@@ -2382,7 +2382,7 @@ ul.breadcrumb li+li:last-child {
 .header {
   position: relative;
   margin: 0 auto;
-  width: calc(100% - 20px);
+  width: calc(100% - 15px);
 }
 @media (min-width: 1200px) {
   .header {
@@ -2437,7 +2437,7 @@ ul.breadcrumb li+li:last-child {
 .content-wrap {
   float: right;
   box-sizing: border-box;
-  padding: 40px;
+  padding: 30px;
   width: calc(100% - 240px);
   background: #fff;
   min-height: 700px;
@@ -2785,13 +2785,13 @@ ul.breadcrumb li+li:last-child {
   text-overflow: ellipsis;
 }
 .content-wrap {
-  padding: initial;
+  padding: 10px;
   background: initial;
   box-shadow: initial;
   border-radius: initial;
 }
 .post-block {
-  padding: 40px;
+  padding: 30px;
   background: #fff;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12);
   border-radius: initial;
@@ -2802,7 +2802,7 @@ ul.breadcrumb li+li:last-child {
   border-radius: initial;
 }
 .comments {
-  padding: 40px;
+  padding: 30px;
   margin: auto;
   margin-top: 0px;
   background: #fff;
@@ -2810,7 +2810,7 @@ ul.breadcrumb li+li:last-child {
   border-radius: initial;
 }
 .posts-expand {
-  padding-top: initial;
+  padding-top: 5px;
 }
 .post-nav-divider {
   width: 4%;
@@ -2948,7 +2948,6 @@ ul.breadcrumb li+li:last-child {
     padding: initial !important;
   }
   .post-block {
-    padding: 0px;
     min-height: auto;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.06), 0 1px 5px 0 rgba(0,0,0,0.12), 0 -1px 0.5px 0 rgba(0,0,0,0.09);
     border-radius: initial;
@@ -2964,18 +2963,17 @@ ul.breadcrumb li+li:last-child {
     margin: 8px 0 0;
   }
 }
-.post {
-  margin-left: 10px;
-  margin-top: 15px;
-  padding: 8px;
-  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
-  opacity: 0.9;
-}
 #heart {
   animation: heartAnimate 1.33s ease-in-out infinite;
 }
 .with-love {
   color: #ffb6c1;
+}
+.post {
+  margin-bottom: 15px;
+  padding: 8px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
