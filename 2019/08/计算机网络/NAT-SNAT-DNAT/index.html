@@ -103,7 +103,7 @@
 <meta property="og:description" content="NATNAT：网络地址转换（Network Address Translation） 优点 节约公网的IP地址（费用） 能够有效地避免来自外网的攻击，隐藏并保护内网的计算机（外网的人不知道内网的IP地址）">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ndga.github.io/2019/08/计算机网络/NAT-SNAT-DNAT/%E5%AE%9E%E9%AA%8C%E7%BD%91%E7%BB%9C%E6%8B%93%E6%89%91%E5%9B%BE.jpg">
-<meta property="og:updated_time" content="2019-08-10T06:45:57.986Z">
+<meta property="og:updated_time" content="2019-08-10T08:17:19.939Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NAT-SNAT-DNAT">
 <meta name="twitter:description" content="NATNAT：网络地址转换（Network Address Translation） 优点 节约公网的IP地址（费用） 能够有效地避免来自外网的攻击，隐藏并保护内网的计算机（外网的人不知道内网的IP地址）">
@@ -459,7 +459,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-10 14:45:57" itemprop="dateModified" datetime="2019-08-10T14:45:57+08:00">2019-08-10</time>
+                <time title="修改时间：2019-08-10 16:17:19" itemprop="dateModified" datetime="2019-08-10T16:17:19+08:00">2019-08-10</time>
               </span>
             
           
@@ -568,7 +568,7 @@
 <li><p>临时配置IP地址（重启失效）<br><code>ip address add 192.168.57.1/24 dev ens33</code>  配置ip地址<br><code>ip add del 192.168.57.1/24 dev ens33</code>  删除ip地址 </p>
 </li>
 <li><p>永久配置IP地址、子网掩码和默认网关地址</p>
-  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  [root@MySQL network-scripts]# cat ifcfg-ens33</span><br><span class="line"><span class="meta">  #</span><span class="bash">BOOTPROTO=dhcp</span></span><br><span class="line">  BOOTPROTO=none</span><br><span class="line">  NAME=ens33</span><br><span class="line"><span class="meta">  #</span><span class="bash">UUID=655909bd-e927-49a5-88f0-4aeb333409d4</span></span><br><span class="line">  DEVICE=ens33</span><br><span class="line">  ONBOOT=yes</span><br><span class="line">  IPADDR=192.168.57.1</span><br><span class="line">  PREFIX=24</span><br><span class="line">  GATEWAY=192.168.57.2</span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">[root@MySQL network-scripts]# service network restart</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[root@MySQL network-scripts]# cat ifcfg-ens33</span><br><span class="line"><span class="meta">#</span><span class="bash"> BOOTPROTO=dhcp</span></span><br><span class="line">BOOTPROTO=none</span><br><span class="line">NAME=ens33</span><br><span class="line"><span class="meta">#</span><span class="bash"> UUID=655909bd-e927-49a5-88f0-4aeb333409d4</span></span><br><span class="line">DEVICE=ens33</span><br><span class="line">ONBOOT=yes</span><br><span class="line">IPADDR=192.168.57.1</span><br><span class="line">PREFIX=24</span><br><span class="line">GATEWAY=192.168.57.2</span><br><span class="line">DNS1=114.114.114.114</span><br><span class="line">[root@MySQL network-scripts]# service network restart</span><br></pre></td></tr></table></figure>
 
 <p><code>ifcfg-ens33</code>是一个配置文件，Linux下一切皆文件，文件是放在磁盘里的，能被保存下来；而内存里的东西关机后不会被保存。</p>
 </li>
@@ -581,7 +581,10 @@
 </ul>
 </li>
 </ul>
-<h5 id="2-清除两台主机的防火墙规则"><a href="#2-清除两台主机的防火墙规则" class="headerlink" title="2. 清除两台主机的防火墙规则"></a>2. 清除两台主机的防火墙规则</h5><ul>
+<h5 id="2-清除两台主机的防火墙规则"><a href="#2-清除两台主机的防火墙规则" class="headerlink" title="2. 清除两台主机的防火墙规则"></a>2. 清除两台主机的防火墙规则</h5><blockquote>
+<p>centos7里默认的防火墙软件 <code>firewall</code><br>centos6里默认的防火墙软件 <code>iptables</code></p>
+</blockquote>
+<ul>
 <li><p>清除防火墙规则<br><code>systemctl stop firewalld</code>  关闭firewalld服务<br><code>iptables -F</code>  清除filter表里的规则<br><code>iptables -t nat -F</code>  清除nat表里的规则</p>
 </li>
 <li><p>查看防火墙规则<br><code>iptables -L</code>  查看filter表里的规则<br><code>iptables -t nat -L</code>  查看nat表里的规则<br><code>iptables -t nat -L -nv</code>  以数字形式查看nat表的防火墙规则</p>
@@ -598,7 +601,10 @@
 
 </li>
 </ul>
-<h5 id="4-添加使用SNAT策略的防火墙规则"><a href="#4-添加使用SNAT策略的防火墙规则" class="headerlink" title="4. 添加使用SNAT策略的防火墙规则"></a>4. 添加使用SNAT策略的防火墙规则</h5><p>规则示例<br><code>iptables -t nat -A POSTROUTING -o ens37 -s 192.168.57.0/24 -j SNAT --to-source 192.168.0.156</code><br>解释<br><code>iptables -t nat -A POSTROUTING</code>  在<code>nat</code>表的<code>POSTROUTING</code>链上添加规则<br><code>-o ens37</code>  指定数据出去的接口为<code>ens37</code>（o：output）<br><code>-s 192.168.57.0/24</code>  指定来自特定网段 <code>192.168.57.0/24</code> 的数据包（s：source）<br><code>-j SNAT</code>  采取的 nat 措施是<code>SNAT</code>策略<br><code>--to-source 192.168.0.156</code>  指定接入公网时源IP地址改为<code>192.168.0.156</code></p>
+<h5 id="4-添加使用SNAT策略的防火墙规则"><a href="#4-添加使用SNAT策略的防火墙规则" class="headerlink" title="4. 添加使用SNAT策略的防火墙规则"></a>4. 添加使用SNAT策略的防火墙规则</h5><ul>
+<li>规则示例<br><code>iptables -t nat -A POSTROUTING -o ens37 -s 192.168.57.0/24 -j SNAT --to-source 192.168.0.156</code></li>
+<li>解释<br><code>iptables -t nat -A POSTROUTING</code>  在<code>nat</code>表的<code>POSTROUTING</code>链上添加规则<br><code>-o ens37</code>  指定数据出去的接口为<code>ens37</code>（o：output）<br><code>-s 192.168.57.0/24</code>  指定来自特定网段 <code>192.168.57.0/24</code> 的数据包（s：source）<br><code>-j SNAT</code>  采取的 nat 措施是<code>SNAT</code>策略<br><code>--to-source 192.168.0.156</code>  指定接入公网时源IP地址改为<code>192.168.0.156</code></li>
+</ul>
 <h5 id="5-直接在防火墙的服务器编写配置NAT的脚本文件"><a href="#5-直接在防火墙的服务器编写配置NAT的脚本文件" class="headerlink" title="5. 直接在防火墙的服务器编写配置NAT的脚本文件"></a>5. 直接在防火墙的服务器编写配置NAT的脚本文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">[root@NAT_Server ~]# vim nat.sh</span><br><span class="line">[root@NAT_Server ~]# cat nat.sh </span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 清除nat和filter表里的防火墙规则</span></span><br><span class="line">iptables -t nat -F</span><br><span class="line">iptables -F</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 临时开启路由功能</span></span><br><span class="line">echo 1 &gt;/proc/sys/net/ipv4/ip_forward</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加SNAT功能的防火墙规则</span></span><br><span class="line">iptables -t nat -A POSTROUTING -o ens37 -s 192.168.57.0/24 -j SNAT --to-source 192.168.0.156</span><br><span class="line"></span><br><span class="line">[root@NAT_Server ~]# bash nat.bash</span><br></pre></td></tr></table></figure>
 
 <h5 id="6-排除故障思路"><a href="#6-排除故障思路" class="headerlink" title="6. 排除故障思路"></a>6. 排除故障思路</h5><ol>
@@ -620,42 +626,42 @@
 <li>在公网上发布位于局域网内的服务器，把局域网的IP地址转换成公网上能找到的公网IP地址，让公网的用户可以直接访问。</li>
 <li>外面的人不知道内网的服务器的IP地址，保护服务器免受黑客攻击</li>
 </ul>
-<h3 id="DNAT策略的应用-发布内网的Linux服务器"><a href="#DNAT策略的应用-发布内网的Linux服务器" class="headerlink" title="DNAT策略的应用-发布内网的Linux服务器"></a>DNAT策略的应用-发布内网的Linux服务器</h3><h5 id="1-开启web服务器"><a href="#1-开启web服务器" class="headerlink" title="1. 开启web服务器"></a>1. 开启web服务器</h5><ul>
+<h3 id="DNAT策略的应用-发布内网的Linux服务器"><a href="#DNAT策略的应用-发布内网的Linux服务器" class="headerlink" title="DNAT策略的应用-发布内网的Linux服务器"></a>DNAT策略的应用-发布内网的Linux服务器</h3><blockquote>
+<p><strong>前提</strong><br>两台主机都配置好了IP地址、关闭了防火墙功能，NAT_Server主机已开启了路由转发功能，如果没有参考前面实现</p>
+</blockquote>
+<h5 id="1-内网主机开启web服务器"><a href="#1-内网主机开启web服务器" class="headerlink" title="1. 内网主机开启web服务器"></a>1. 内网主机开启web服务器</h5><ul>
 <li>安装epel源  <code>yum install epel-release</code></li>
 <li>安装web服务器-nginx软件包  <code>yum install nginx</code></li>
 <li>刷新nginx服务  <code>service nginx restart</code></li>
 </ul>
-<h5 id="2-监听端口"><a href="#2-监听端口" class="headerlink" title="2. 监听端口"></a>2. 监听端口</h5><blockquote>
-<p>web服务：80端口<br>ssh服务：22端口</p>
-</blockquote>
-<ul>
-<li>安装lsof软件包  <code>yum install lsof</code></li>
-<li>查看80端口被哪个进程占用  <code>lsof -i:80</code></li>
+<h5 id="2-查看服务是否开启"><a href="#2-查看服务是否开启" class="headerlink" title="2. 查看服务是否开启"></a>2. 查看服务是否开启</h5><ul>
+<li>查看nginx服务是否开启 <code>netstat -anplut|grep nginx</code></li>
+<li>安装lsof软件包  <code>yum install lsof</code><br>查看80端口被哪个进程占用  <code>lsof -i:80</code></li>
 </ul>
 <h5 id="3-解决访问防火墙服务器本身的问题"><a href="#3-解决访问防火墙服务器本身的问题" class="headerlink" title="3. 解决访问防火墙服务器本身的问题"></a>3. 解决访问防火墙服务器本身的问题</h5><ul>
 <li><p>方法一：修改ssh服务器的端口，把ssh服务的端口号改成其他的端口号<br><code>vim /etc/ssh/sshd_config</code></p>
 </li>
-<li><p>方法二：修改DNAT策略<br><code>iptables -t nat -A PREROUTING -i ens33 -d 192.168.0.156 -p tcp --dport 9988 -j DNAT --to-destination 192.168.57.1:22</code></p>
+<li><p>方法二：修改DNAT策略<br><code>iptables -t nat -A PREROUTING -i ens37 -d 192.168.0.156 -p tcp --dport 9988 -j DNAT --to-destination 192.168.57.1:22</code></p>
 </li>
 </ul>
-<h5 id="4-添加使用DNAT策略的防火墙规则"><a href="#4-添加使用DNAT策略的防火墙规则" class="headerlink" title="4. 添加使用DNAT策略的防火墙规则"></a>4. 添加使用DNAT策略的防火墙规则</h5><blockquote>
-<p>前提条件：局域网的Web服务器正确设置了IP地址、子网掩码和默认网关地址，确认已开启网关的路由转发功能，确认防火墙规则已清除，如果没有操作如上。</p>
-</blockquote>
-<p><strong>规则示例</strong><br><code>iptables -t nat -A PREROUTING -i ens33 -d 192.168.0.156 -p tcp --dport 80 -j DNAT --to-destination 192.168.57.1:80</code><br><strong>解释</strong><br><code>iptables -t nat -A PREROUTING</code>  在<code>nat</code>表的<code>PREROUTING</code>链上添加规则<br><code>-i ens33</code>  指定数据进来的接口为<code>eth0</code>（i：input）<br><code>-d 192.168.0.156</code>  指定访问的目的地址是外网ip为<code>192.168.0.156</code>（d：destination）<br><code>-p tcp --dport 80</code>  指定访问的端口是<code>80</code>端口，在传输层使用的协议是<code>tcp</code>协议（p：protocol）<br><code>-j DNAT</code>  采取的nat措施是<code>DNAT</code>策略<br><code>--to-destination 192.168.57.1:80</code>  指定转发到内网的目的IP是<code>192.168.57.1</code>并且端口也是<code>80</code>（端口号也是可以变的，不用跟外网的端口号对应，可以是别的端口号）</p>
-<h5 id="4-直接在服务器上编写配置NAT的脚本文件"><a href="#4-直接在服务器上编写配置NAT的脚本文件" class="headerlink" title="4. 直接在服务器上编写配置NAT的脚本文件"></a>4. 直接在服务器上编写配置NAT的脚本文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[root@MySQL ~]# vim nat.sh</span><br><span class="line">[root@MySQL ~]# cat nat.sh </span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 清除nat和filter表里的防火墙规则</span></span><br><span class="line">iptables -t nat -F</span><br><span class="line">iptables -F</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 临时开启路由功能</span></span><br><span class="line">echo 1 &gt;/proc/sys/net/ipv4/ip_forward</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加SNAT功能的防火墙规则</span></span><br><span class="line">iptables -t nat -A POSTROUTING -o ens33 -s 192.168.57.0/24 -j SNAT --to-source 192.168.0.156</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加web服务器的DNAT规则</span></span><br><span class="line">iptables -t nat -A PREROUTING -i ens33 -d 192.168.0.78 -p tcp --dport 80 -j DNAT --to-destination 192.168.57.1:80</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加ssh服务器的DNAT规则</span></span><br><span class="line">iptables -t nat -A PREROUTING -i ens33 -d 192.168.0.78 -p tcp --dport 22 -j DNAT --to-destination 192.168.57.1:22</span><br><span class="line"></span><br><span class="line">[root@MySQL ~]# bash nat.bash</span><br></pre></td></tr></table></figure>
+<h5 id="4-添加使用DNAT策略的防火墙规则"><a href="#4-添加使用DNAT策略的防火墙规则" class="headerlink" title="4. 添加使用DNAT策略的防火墙规则"></a>4. 添加使用DNAT策略的防火墙规则</h5><ul>
+<li>规则示例<br><code>iptables -t nat -A PREROUTING -i ens37 -d 192.168.0.156 -p tcp --dport 80 -j DNAT --to-destination 192.168.57.1:80</code></li>
+<li>解释<br><code>iptables -t nat -A PREROUTING</code>  在<code>nat</code>表的<code>PREROUTING</code>链上添加规则<br><code>-i ens37</code>  指定数据进来的接口为<code>ens37</code>（i：input）<br><code>-d 192.168.0.156</code>  指定访问的目的地址是外网ip为<code>192.168.0.156</code>（d：destination）<br><code>-p tcp --dport 80</code>  指定访问的端口是<code>80</code>端口，在传输层使用的协议是<code>tcp</code>协议（p：protocol）<br><code>-j DNAT</code>  采取的nat措施是<code>DNAT</code>策略<br><code>--to-destination 192.168.57.1:80</code>  指定转发到内网的目的IP是<code>192.168.57.1</code>并且端口也是<code>80</code>（端口号也是可以变的，不用跟外网的端口号对应，可以是别的端口号）</li>
+</ul>
+<h5 id="5-直接在服务器上编写配置NAT的脚本文件"><a href="#5-直接在服务器上编写配置NAT的脚本文件" class="headerlink" title="5. 直接在服务器上编写配置NAT的脚本文件"></a>5. 直接在服务器上编写配置NAT的脚本文件</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[root@MySQL ~]# vim nat.sh</span><br><span class="line">[root@MySQL ~]# cat nat.sh </span><br><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 清除nat和filter表里的防火墙规则</span></span><br><span class="line">iptables -t nat -F</span><br><span class="line">iptables -F</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 临时开启路由功能</span></span><br><span class="line">echo 1 &gt;/proc/sys/net/ipv4/ip_forward</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加SNAT功能的防火墙规则</span></span><br><span class="line">iptables -t nat -A POSTROUTING -o ens37 -s 192.168.57.0/24 -j SNAT --to-source 192.168.0.156</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加web服务器的DNAT规则</span></span><br><span class="line">iptables -t nat -A PREROUTING -i ens37 -d 192.168.0.156 -p tcp --dport 80 -j DNAT --to-destination 192.168.57.1:80</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> 添加ssh服务器的DNAT规则</span></span><br><span class="line">iptables -t nat -A PREROUTING -i ens37 -d 192.168.0.156 -p tcp --dport 22 -j DNAT --to-destination 192.168.57.1:22</span><br><span class="line"></span><br><span class="line">[root@MySQL ~]# bash nat.bash</span><br></pre></td></tr></table></figure>
 
-<h5 id="防火墙的好处是什么？"><a href="#防火墙的好处是什么？" class="headerlink" title="防火墙的好处是什么？"></a>防火墙的好处是什么？</h5><ul>
-<li>隐藏IP</li>
-<li>过滤外网IP</li>
-<li>不符合要求的数据不让过来，保护内部网络。</li>
-</ul>
-<h5 id="防火墙的危害是什么？"><a href="#防火墙的危害是什么？" class="headerlink" title="防火墙的危害是什么？"></a>防火墙的危害是什么？</h5><ul>
-<li>会影响数据传输的速度</li>
-<li>消耗cpu和内存、网络带宽等资源</li>
-<li>需要资金投入</li>
-</ul>
-<h5 id="路由器和防火墙有什么关系？"><a href="#路由器和防火墙有什么关系？" class="headerlink" title="路由器和防火墙有什么关系？"></a>路由器和防火墙有什么关系？</h5><ul>
-<li>防火墙是高级的路由器，有数据过滤功能。</li>
+<p>DNAT策略成功后我们就可以通过访问192.168.0.156的IP地址访问到内网主机192.168.57.1的服务器</p>
+<h5 id="6-一些常见服务的端口号"><a href="#6-一些常见服务的端口号" class="headerlink" title="6. 一些常见服务的端口号"></a>6. 一些常见服务的端口号</h5><ul>
+<li>Web服务(nginx/apache)：80</li>
+<li>SSH：22</li>
+<li>MySQL：3306</li>
+<li>SQLServer：1433 </li>
+<li>Oracle：1521 </li>
+<li>FTP：21 </li>
+<li>Tomcat：8080</li>
+<li>Telnet ：23 </li>
+<li>HTTP：80</li>
+<li>HTTPS：443</li>
 </ul>
 
       
@@ -944,7 +950,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT"><span class="nav-text">NAT</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优点"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点"><span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IP地址"><span class="nav-text">IP地址</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#SNAT"><span class="nav-text">SNAT</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SNAT的作用"><span class="nav-text">SNAT的作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SNAT策略的应用"><span class="nav-text">SNAT策略的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-配置两台主机的IP地址、子网掩码和默认网关地址"><span class="nav-text">1. 配置两台主机的IP地址、子网掩码和默认网关地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-清除两台主机的防火墙规则"><span class="nav-text">2. 清除两台主机的防火墙规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-开启NAT-Server主机的路由转发功能"><span class="nav-text">3. 开启NAT_Server主机的路由转发功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-添加使用SNAT策略的防火墙规则"><span class="nav-text">4. 添加使用SNAT策略的防火墙规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-直接在防火墙的服务器编写配置NAT的脚本文件"><span class="nav-text">5. 直接在防火墙的服务器编写配置NAT的脚本文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-排除故障思路"><span class="nav-text">6. 排除故障思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNAT"><span class="nav-text">DNAT</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#DNAT的作用"><span class="nav-text">DNAT的作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNAT策略的应用-发布内网的Linux服务器"><span class="nav-text">DNAT策略的应用-发布内网的Linux服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-开启web服务器"><span class="nav-text">1. 开启web服务器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-监听端口"><span class="nav-text">2. 监听端口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-解决访问防火墙服务器本身的问题"><span class="nav-text">3. 解决访问防火墙服务器本身的问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-添加使用DNAT策略的防火墙规则"><span class="nav-text">4. 添加使用DNAT策略的防火墙规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-直接在服务器上编写配置NAT的脚本文件"><span class="nav-text">4. 直接在服务器上编写配置NAT的脚本文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#防火墙的好处是什么？"><span class="nav-text">防火墙的好处是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#防火墙的危害是什么？"><span class="nav-text">防火墙的危害是什么？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#路由器和防火墙有什么关系？"><span class="nav-text">路由器和防火墙有什么关系？</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#NAT"><span class="nav-text">NAT</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#优点"><span class="nav-text">优点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#缺点"><span class="nav-text">缺点</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#IP地址"><span class="nav-text">IP地址</span></a></li></ol></li></ol><li class="nav-item nav-level-3"><a class="nav-link" href="#SNAT"><span class="nav-text">SNAT</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#SNAT的作用"><span class="nav-text">SNAT的作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SNAT策略的应用"><span class="nav-text">SNAT策略的应用</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-配置两台主机的IP地址、子网掩码和默认网关地址"><span class="nav-text">1. 配置两台主机的IP地址、子网掩码和默认网关地址</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-清除两台主机的防火墙规则"><span class="nav-text">2. 清除两台主机的防火墙规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-开启NAT-Server主机的路由转发功能"><span class="nav-text">3. 开启NAT_Server主机的路由转发功能</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-添加使用SNAT策略的防火墙规则"><span class="nav-text">4. 添加使用SNAT策略的防火墙规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-直接在防火墙的服务器编写配置NAT的脚本文件"><span class="nav-text">5. 直接在防火墙的服务器编写配置NAT的脚本文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-排除故障思路"><span class="nav-text">6. 排除故障思路</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNAT"><span class="nav-text">DNAT</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#DNAT的作用"><span class="nav-text">DNAT的作用</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNAT策略的应用-发布内网的Linux服务器"><span class="nav-text">DNAT策略的应用-发布内网的Linux服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-内网主机开启web服务器"><span class="nav-text">1. 内网主机开启web服务器</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-查看服务是否开启"><span class="nav-text">2. 查看服务是否开启</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#3-解决访问防火墙服务器本身的问题"><span class="nav-text">3. 解决访问防火墙服务器本身的问题</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#4-添加使用DNAT策略的防火墙规则"><span class="nav-text">4. 添加使用DNAT策略的防火墙规则</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#5-直接在服务器上编写配置NAT的脚本文件"><span class="nav-text">5. 直接在服务器上编写配置NAT的脚本文件</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#6-一些常见服务的端口号"><span class="nav-text">6. 一些常见服务的端口号</span></a></li></ol></li></div>
             
 
           </div>
