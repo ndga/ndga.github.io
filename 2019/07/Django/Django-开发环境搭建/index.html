@@ -106,7 +106,7 @@
 <meta property="og:image" content="https://ndga.github.io/2019/07/Django/Django-开发环境搭建/%E6%96%87%E4%BB%B6.gitignore%E6%B7%BB%E5%8A%A0%E7%9A%84%E9%85%8D%E7%BD%AE%E5%86%85%E5%AE%B9.png">
 <meta property="og:image" content="https://ndga.github.io/2019/07/Django/Django-开发环境搭建/%E5%88%9B%E5%BB%BADjango%E9%A1%B9%E7%9B%AE.png">
 <meta property="og:image" content="https://ndga.github.io/2019/07/Django/Django-开发环境搭建/%E5%88%9B%E5%BB%BADjango%E5%BA%94%E7%94%A8.png">
-<meta property="og:updated_time" content="2019-08-05T00:35:09.656Z">
+<meta property="og:updated_time" content="2019-08-17T02:58:00.198Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django-开发环境搭建">
 <meta name="twitter:description" content="在GitHub上创建一个仓库​    登录 GitHub 后，点击 Repositories ，再点 new 新建仓库，如图配置：">
@@ -462,7 +462,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-05 08:35:09" itemprop="dateModified" datetime="2019-08-05T08:35:09+08:00">2019-08-05</time>
+                <time title="修改时间：2019-08-17 10:58:00" itemprop="dateModified" datetime="2019-08-17T10:58:00+08:00">2019-08-17</time>
               </span>
             
           
@@ -537,21 +537,22 @@
 <h5 id="2-搭建流程"><a href="#2-搭建流程" class="headerlink" title="2. 搭建流程"></a>2. 搭建流程</h5><ol>
 <li><p>克隆远程仓库到本地仓库，进入 master 分支</p>
 <ul>
-<li><code>$ git clone https://github.com/ndga/Django_study.git</code></li>
-<li><code>$ cd Django_study/</code>  进入本地仓库</li>
-<li><code>$ git init</code>  初始化本地仓库</li>
+<li><p><code>$ git clone https://github.com/ndga/Django_study.git</code></p>
+</li>
+<li><p><code>$ cd Django_study/</code>  进入本地仓库</p>
+</li>
+<li><p><code>$ git init</code>  初始化本地仓库</p>
+</li>
 </ul>
 <p>（或者直接手动进入本地仓库文件夹里面，右击打开 Git Bash Here，进入 master 分支）</p>
 </li>
 <li><p>基于 master 分支新建一个分支并切换到新建的分支</p>
 <ul>
 <li><code>$ git branch</code>  列出本地分支</li>
-<li><code>$ git branch -a</code>  列出所有分支<ul>
+<li><code>$ git branch -a</code>  列出所有分支</li>
 <li>方法一<ul>
 <li><code>$ git branch v0.1-django-start</code>  创建v0.1-django-start分支</li>
 <li><code>$ git checkout v0.1-django-start</code>  切换到 v0.1-django-start 分支</li>
-</ul>
-</li>
 </ul>
 </li>
 <li>方法二<ul>
@@ -560,8 +561,6 @@
 </li>
 </ul>
 </li>
-</ol>
-<ol start="3">
 <li><p>在 v0.1-django-start 分支下配置好虚拟环境</p>
 <ul>
 <li><p><code>$ python -V</code>  查看 python 的版本</p>
