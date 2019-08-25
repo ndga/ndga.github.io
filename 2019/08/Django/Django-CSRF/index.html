@@ -94,16 +94,20 @@
 
 
 
-  <meta name="description" content="不努力就要回家种田了+_+">
-<meta property="og:type" content="website">
-<meta property="og:title" content="NDGの笔记网站">
-<meta property="og:url" content="https://ndga.github.io/archives/2019/06/index.html">
+  <meta name="description" content="1. 什么是CSRF？CSRF：跨站请求伪造（Cross-site request forgery），也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装成受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSR">
+<meta name="keywords" content="Django,token">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Django-CSRF">
+<meta property="og:url" content="https://ndga.github.io/2019/08/Django/Django-CSRF/index.html">
 <meta property="og:site_name" content="NDGの笔记网站">
-<meta property="og:description" content="不努力就要回家种田了+_+">
+<meta property="og:description" content="1. 什么是CSRF？CSRF：跨站请求伪造（Cross-site request forgery），也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装成受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSR">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://ndga.github.io/2019/08/Django/Django-CSRF/CSRF%E6%94%BB%E5%87%BB.jpg">
+<meta property="og:updated_time" content="2019-08-25T06:10:20.359Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NDGの笔记网站">
-<meta name="twitter:description" content="不努力就要回家种田了+_+">
+<meta name="twitter:title" content="Django-CSRF">
+<meta name="twitter:description" content="1. 什么是CSRF？CSRF：跨站请求伪造（Cross-site request forgery），也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（XSS），但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装成受信任用户的请求来利用受信任的网站。与XSS攻击相比，CSR">
+<meta name="twitter:image" content="https://ndga.github.io/2019/08/Django/Django-CSRF/CSRF%E6%94%BB%E5%87%BB.jpg">
 
 
 
@@ -111,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://ndga.github.io/archives/2019/06/">
+  <link rel="canonical" href="https://ndga.github.io/2019/08/Django/Django-CSRF/">
 
 
 
@@ -121,7 +125,7 @@
   };
 </script>
 
-  <title>归档 | NDGの笔记网站</title>
+  <title>Django-CSRF | NDGの笔记网站</title>
   
 
 
@@ -169,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -287,7 +291,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -377,142 +381,317 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 9 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://ndga.github.io/2019/08/Django/Django-CSRF/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lxd">
+      <meta itemprop="description" content="不努力就要回家种田了+_+">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="NDGの笔记网站">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/06/计算机网络/HTTP协议/" itemprop="url">
-            
-              <span itemprop="name">HTTP协议</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">Django-CSRF
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-27T14:42:18+08:00" content="2019-06-27">
-          06-27
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
 
+          
+          
+          
 
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-25 10:19:23 / 修改时间：14:10:20" itemprop="dateCreated datePublished" datetime="2019-08-25T10:19:23+08:00">2019-08-25</time>
+            </span>
+          
+
+          
+            
+
+            
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Django/" itemprop="url" rel="index"><span itemprop="name">Django</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+                 阅读次数： 
+                <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+              </span>
+            </span>
+          
+
+          <br>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/Python/每周刷题-20190320/" itemprop="url">
-            
-              <span itemprop="name">每周刷题-20190320</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-26T16:00:53+08:00" content="2019-06-26">
-          06-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <h3 id="1-什么是CSRF？"><a href="#1-什么是CSRF？" class="headerlink" title="1. 什么是CSRF？"></a>1. 什么是CSRF？</h3><p>CSRF：跨站请求伪造（Cross-site request forgery），也被称为“One Click Attack”或者Session Riding，通常缩写为CSRF或者XSRF，是一种对网站的恶意利用。尽管听起来像跨站脚本（<a href="https://baike.baidu.com/item/XSS" target="_blank" rel="noopener">XSS</a>），但它与XSS非常不同，XSS利用站点内的信任用户，而CSRF则通过伪装成受信任用户的请求来利用受信任的网站。与<a href="https://baike.baidu.com/item/XSS" target="_blank" rel="noopener">XSS</a>攻击相比，CSRF攻击往往不大流行（因此对其进行防范的资源也相当稀少）和难以防范，所以被认为比<a href="https://baike.baidu.com/item/XSS" target="_blank" rel="noopener">XSS</a>更具危险性。【来自百度百科】</p>
+<p>可以这么理解CSRF攻击：攻击者盗用了你的身份，以你的名义发送恶意请求。CSRF能够做的事情包括：</p>
+<ul>
+<li>以你名义发送邮件，发消息，盗取你的账号</li>
+<li>甚至于购买商品，虚拟货币转账……</li>
+<li>造成的问题包括：个人隐私泄露以及财产安全。</li>
+</ul>
+<a id="more"></a>
+
+<h3 id="2-CSRF的原理"><a href="#2-CSRF的原理" class="headerlink" title="2. CSRF的原理"></a>2. CSRF的原理</h3><p>下图简单阐述了CSRF攻击的思想：</p>
+<p><img src="/2019/08/Django/Django-CSRF/CSRF%E6%94%BB%E5%87%BB.jpg" alt="CSRF攻击"></p>
+<p>从上图可以看出，要完成一次CSRF攻击，受害者必须依次完成两个步骤：</p>
+<ol>
+<li>登录受信任网站A，并在本地生成Cookie。 </li>
+<li>在不登出A的情况下，访问危险网站B。=&gt; host/trans/from=a&amp;to=bsite&amp;money=100</li>
+</ol>
+<p>看到这里，你也许会说：“如果我不满足以上两个条件中的一个，我就不会受到CSRF的攻击”。是的，确实如此，但你不能保证以下情况不会发生：</p>
+<ol>
+<li>你不能保证你登录了一个网站后，不再打开一个tab页面并访问另外的网站。 </li>
+<li>你不能保证你关闭浏览器了后，你本地的Cookie立刻过期，你上次的会话已经结束。（事实上，关闭浏览器不能结束一个会话，但大多数人都会错误的认为关闭浏览器就等于退出登录/结束会话了……） </li>
+<li>上图中所谓的攻击网站，可能是一个存在其他漏洞的可信任的经常被人访问的网站。 </li>
+</ol>
+<blockquote>
+<p>CSRF攻击是源于WEB的隐式身份验证机制！WEB的身份验证机制虽然可以保证一个请求是来自于某个用户的浏览器，但却无法保证该请求是用户批准发送的！</p>
+</blockquote>
+<h3 id="3-对CSRF的防御"><a href="#3-对CSRF的防御" class="headerlink" title="3. 对CSRF的防御"></a>3. 对CSRF的防御</h3><p>CSRF的防御可以从服务端和客户端两方面着手，防御效果是从服务端着手效果比较好，现在一般的CSRF防御也都在服务端进行。服务端的CSRF防御方法有很多，但总的思想都是一致的，就是在客户端页面<code>增加伪随机数</code>。</p>
+<ul>
+<li><p>Cookie Hashing</p>
+<p>所有表单都包含同一个伪随机值。这可能是最简单的解决方案了，因为攻击者不能获得第三方的Cookie(理论上)，所以表单中的数据也就构造失败了。<br>这个方法已经可以杜绝99%的CSRF攻击了，那还有1%呢….由于用户的Cookie很容易由于网站的XSS漏洞而被盗取，这就另外的1%。一般的攻击者看到有需要算Hash值，基本都会放弃了，某些除外，所以如果需要100%的杜绝，这个不是最好的方法。</p>
+</li>
+<li><p>One-Time Tokens</p>
+<p>不同的表单包含一个不同的伪随机值。每个伪随机数只使用一次。这也是Django使用的方法。<br>但是在实现One-Time  Tokens时，需要注意一点：就是“并行会话的兼容”。如果用户在一个站点上同时打开了两个不同的表单，CSRF保护措施不应该影响到他对任何表单的提 交。考虑一下如果每次表单被装入时站点生成一个伪随机值来覆盖以前的伪随机值将会发生什么情况：用户只能成功地提交他最后打开的表单，因为所有其他的表单 都含有非法的伪随机值。必须小心操作以确保CSRF保护措施不会影响选项卡式的浏览或者利用多个浏览器窗口浏览一个站点。</p>
+</li>
+</ul>
+<h3 id="4-Django应对CSRF攻击的办法"><a href="#4-Django应对CSRF攻击的办法" class="headerlink" title="4. Django应对CSRF攻击的办法"></a>4. Django应对CSRF攻击的办法</h3><ul>
+<li><p>原理</p>
+<p>Django使用专门的中间件<code>CsrfMiddleware</code>来进行<code>CSRF防护</code>。具体的原理如下：</p>
+<p>Django第一次响应来自某个客户端的请求时，会在服务器端随机生成一个<code>token</code>，把这个<code>token</code>放在<code>cookie</code>里。然后每次 POST 请求都会带上这个<code>token</code>，这样就能避免被 CSRF 攻击。</p>
+<ul>
+<li>在返回的 HTTP 响应的<code>cookie</code>里，Django会为你添加一个<code>csrftoken</code>字段，其值为一个自动生成的<code>token</code></li>
+<li>在所有的 POST 表单提交时，必须包含一个<code>csrfmiddlewaretoken</code>字段 （只需要在模板里加一个 模板标签， Django就会自动帮你生成）</li>
+<li>在处理 POST 请求之前，Django会验证这个请求的<code>cookie</code>里的<code>csrftoken</code>字段的值和提交的表单里的<code>csrfmiddlewaretoken</code>字段的值是否一样。如果一样，则表明这是一个合法的请求，否则，这个请求可能是来自于别人的 csrf 攻击，返回 403 Forbidden.</li>
+<li>在所有<code>ajax</code> POST 请求里，添加一个RequestHeader <code>X-CSRFTOKEN</code>，其值为<code>cookie</code>里的<code>csrftoken</code>字段的值</li>
+</ul>
+</li>
+<li><p>具体操作</p>
+<ul>
+<li><code>settings.py</code>配置（全局防护）<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 配置中间件,启用django.middleware.csrf.CsrfViewMiddleware</span></span><br><span class="line"><span class="comment"># 加上后即可全局使用csrf防护（默认已经添加）；</span></span><br><span class="line"></span><br><span class="line">MIDDLEWARE = [</span><br><span class="line">    <span class="string">'django.middleware.security.SecurityMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.contrib.sessions.middleware.SessionMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.middleware.common.CommonMiddleware'</span>,</span><br><span class="line">    <span class="string">'django.middleware.csrf.CsrfViewMiddleware'</span>,</span><br><span class="line">  ...</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>注：该中间件必须在`SessionMiddleware`之后。它也必须在响应被压缩或解压之前对响应结果进行处理，因此`CsrfMiddleware`必须在`GZipMiddleware`之后执行。</code></pre><ul>
+<li><p>局部防护方法：在视图函数上加<code>@csrf_protect</code>进行单view控制</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">from</span> <span class="selector-tag">django</span><span class="selector-class">.views</span><span class="selector-class">.decorators</span><span class="selector-class">.csrf</span> <span class="selector-tag">import</span> <span class="selector-tag">csrf_protect</span></span><br><span class="line"># 对应的函数加 @<span class="keyword">csrf_protect</span> 装饰器</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>局部不防护：在视图函数中不想进行csrf保护的view可以加上<code>@csrf_exempt</code></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">from</span> <span class="selector-tag">django</span><span class="selector-class">.views</span><span class="selector-class">.decorators</span><span class="selector-class">.csrf</span> <span class="selector-tag">import</span> <span class="selector-tag">csrf_exempt</span></span><br><span class="line"># 对应的函数加 @<span class="keyword">csrf_exempt</span> 装饰器</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启用全局防护时 HTML 页面中 form表单 的操作</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"># 在HTML的表单中form标签后加上</span><span class="template-tag">&#123;% <span class="name"><span class="name">csrf_token</span></span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>启用全局防护时 ajax 提交 Post 请求操作</p>
+<ul>
+<li><p>视图使用render返回</p>
+</li>
+<li><p>在html模板<code>script</code>标签中加：</p>
+</li>
+</ul>
+<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.ajaxSetup(&#123; <span class="string">data:</span> &#123;<span class="string">csrfmiddlewaretoken:</span> <span class="string">'&#123;&#123; csrf_token &#125;&#125;'</span> &#125;, &#125;);</span><br></pre></td></tr></table></figure>
+
+<p>注：不能<code>.js</code>文件中加这个代码</p>
+</li>
+</ul>
+<h3 id="5-其它模板引擎"><a href="#5-其它模板引擎" class="headerlink" title="5. 其它模板引擎"></a>5. 其它模板引擎</h3><blockquote>
+<p>如与Jinja2结合的解决办法：</p>
+</blockquote>
+<p>1、<code>settings.py</code>配置</p>
+<ul>
+<li>在<code>MIDDLEWARE_CLASSES</code>中加上<code>django.middleware.csrf.CsrfViewMiddleware&#39;</code>这个中间件</li>
+</ul>
+<p>2、校验cookie中的csrf值</p>
+<ul>
+<li><p>视图函数：导入模块</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">from django<span class="selector-class">.core</span><span class="selector-class">.context_processors</span> import csrf</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>修改上下文参数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">context = &#123;&#125; </span><br><span class="line">context.update(csrf(request)) </span><br><span class="line"><span class="keyword">return</span> render(context, <span class="string">'login.html'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在模板HTML文件中的对应的Form表单里加</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"hidden"</span> <span class="attr">id</span>=<span class="string">"csrfmiddlewaretoken"</span> <span class="attr">name</span>=<span class="string">"csrfmiddlewaretoken"</span> <span class="attr">value</span>=<span class="string">"&#123;&#123; csrf_token &#125;&#125;"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-heart"></i>感谢阅读-------------</div>
+    
+</div>
+  
+</div>
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <!--<a href="/tags/Django/" rel="tag"># Django</a>-->
+            <a href="/tags/Django/" rel="tag"><i class="fa fa-tag"></i> Django</a>
+          
+            <!--<a href="/tags/token/" rel="tag"># token</a>-->
+            <a href="/tags/token/" rel="tag"><i class="fa fa-tag"></i> token</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/Django/Django-Rides缓存/" rel="next" title="Django-Rides缓存">
+                <i class="fa fa-chevron-left"></i> Django-Rides缓存
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -532,8 +711,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -699,6 +887,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-什么是CSRF？"><span class="nav-text">1. 什么是CSRF？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-CSRF的原理"><span class="nav-text">2. CSRF的原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-对CSRF的防御"><span class="nav-text">3. 对CSRF的防御</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Django应对CSRF攻击的办法"><span class="nav-text">4. Django应对CSRF攻击的办法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-其它模板引擎"><span class="nav-text">5. 其它模板引擎</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -876,6 +1081,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
 
   
 
@@ -891,6 +1100,8 @@
 
   
 
+
+  
 
 
   
