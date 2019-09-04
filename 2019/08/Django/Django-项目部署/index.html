@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="NDGの笔记网站">
 <meta property="og:description" content="1. 常见的部署方式 nginx + uwsgi配置要求严格，效率高  nginx + gunicorn部署极其方便，用gunicorn启动Django服务的好处：  能将Django包装成一个服务启动，进行管理   可以起多个Django进程，提供多进程的服务，提升并发处理能力  supervisor监控gunicorn，一旦gunicorn进程停止服务，马上重新启动进程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-04T09:26:49.095Z">
+<meta property="og:updated_time" content="2019-09-04T10:26:36.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django-项目部署">
 <meta name="twitter:description" content="1. 常见的部署方式 nginx + uwsgi配置要求严格，效率高  nginx + gunicorn部署极其方便，用gunicorn启动Django服务的好处：  能将Django包装成一个服务启动，进行管理   可以起多个Django进程，提供多进程的服务，提升并发处理能力  supervisor监控gunicorn，一旦gunicorn进程停止服务，马上重新启动进程">
@@ -457,7 +457,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-09-04 17:26:49" itemprop="dateModified" datetime="2019-09-04T17:26:49+08:00">2019-09-04</time>
+                <time title="修改时间：2019-09-04 18:26:36" itemprop="dateModified" datetime="2019-09-04T18:26:36+08:00">2019-09-04</time>
               </span>
             
           
@@ -709,8 +709,20 @@
 <li><p>检查服务是否启动</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ps</span> -ef | <span class="keyword">grep</span> nginx</span><br><span class="line"><span class="keyword">ps</span> aux | <span class="keyword">grep</span> nginx</span><br><span class="line">lsof -i:<span class="number">80</span></span><br><span class="line">netstat -anplut</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>安装工具包</p>
-<p><code>yum provides *killall</code>   查看哪个包提供了<code>*killall</code><br><code>/usr/bin/kill</code> =&gt; 包名<br><code>yum install 包名</code><br><code>killall gunicorn</code></p>
+<li><p>查看哪个包提供了<code>*killall</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[root@mariadb ~]# yum provides *killall</span><br><span class="line">/usr/bin/kill =&gt; 包名</span><br><span class="line">[root@mariadb ~]# yum install 包名</span><br><span class="line">[root@mariadb ~]# killall gunicorn</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>kill</code> 和 <code>killall</code> 的区别</p>
+<ul>
+<li><code>kill -9+进程号</code></li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@mariadb ~]# kill -9 104260</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>killall -9+进程名</code>，批量杀死进程</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@mariadb ~]# killall -9  vim</span><br></pre></td></tr></table></figure>
+
 </li>
 </ul>
 <h3 id="5-常见问题"><a href="#5-常见问题" class="headerlink" title="5. 常见问题"></a>5. 常见问题</h3><ul>
